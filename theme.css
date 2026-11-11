@@ -14,6 +14,28 @@
 
 body {
   font-family: sans-serif;
+  margin: 20px;
   background-color: var(--LIGHT-BG);
   background-image: linear-gradient(130deg, var(--LIGHT-BG), var(--GRAY-COLOR));
+}
+
+button {
+  appearance: none;
+  border: none;
+  padding: 12px 14px;
+  background-color: var(--LIGHT-PURPLE);
+  color: var(--LIGHT-BG);
+  font-size: 1.13rem;
+  border-radius: 6px;
+}
+
+ul {
+  list-style: none;
+  background-color: var(--GRAY-COLOR);
+  width: 150px;
+  border: 1px solid var(--GRAY-COLOR);
+}
+ul li {
+  padding: 8px ;
+  font-size: 1.14rem;
 }
