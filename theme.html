@@ -6,20 +6,18 @@
   <title>Theme Switcher</title>
   <link rel="stylesheet" href="./theme.css">
 </head>
-<body>
-  <button id="theme-switcher-button"
+<body class="theme-light">
+  <button class="dropdown-btn" id="theme-switcher-button"
   aria-haspopup="true" aria-expanded="false"
   aria-controls="theme-dropdown">
     Switch Theme
   </button>
-  <ul id="theme-dropdown" role="menu"
+  <ul class="dropdown-menu" id="theme-dropdown" role="menu"
   aria-labelledby="theme-switcher-button" hidden>
-    <li role="menuitem" id="theme-light">Light</li>
-    <li role="menuitem" id="theme-dark">Dark</li>
+    <li class="dropdown-item" role="menuitem" id="theme-light">Light</li>
+    <li class="dropdown-item" role="menuitem" id="theme-dark">Dark</li>
   </ul>
-  <p aria-live="polite">
-    Niko on
-  </p>
+  <p aria-live="polite"></p>
   <script src="./theme.js"></script>
 </body>
 </html>
