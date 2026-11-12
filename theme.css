@@ -10,13 +10,14 @@
   --DARK-COLOR: #333;
   --GRAY-COLOR: #CCC;
   --LIGHT-PURPLE: rgb(119, 2, 119);
+  --LIGHT-GRAY: rgb(228, 228, 228);
 }
 
 body {
   font-family: sans-serif;
   margin: 20px;
   background-color: var(--LIGHT-BG);
-  background-image: linear-gradient(130deg, var(--LIGHT-BG), var(--GRAY-COLOR));
+  background-image: linear-gradient(130deg, var(--LIGHT-BG), var(--LIGHT-GRAY));
 }
 
 button {
@@ -31,11 +32,17 @@ button {
 
 ul {
   list-style: none;
-  background-color: var(--GRAY-COLOR);
+  background-color: var(--LIGHT-BG);
   width: 150px;
-  border: 1px solid var(--GRAY-COLOR);
+  border: 1px solid var(--LIGHT-GRAY);
+  border-radius: 4px;
 }
 ul li {
   padding: 8px ;
   font-size: 1.14rem;
+  transition: background-color 0.3s;
+}
+
+ul li:hover {
+  background-color: var(--GRAY-COLOR);
 }
