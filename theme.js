@@ -1,10 +1,10 @@
 const themes = [
   {
-    name: "Light",
+    name: "light",
     message: "Hey there sunshine -- You switched to Light mode"
   },
   {
-    name: "Dark",
+    name: "dark",
     message: "Total blackness here -- Dark mode activated!"
   }
 ];
@@ -29,7 +29,7 @@ themeItems.forEach(item => {
   item.addEventListener("click", () => {
     closeMenu();
 
-    const currentTheme = item.textContent;
+    const currentTheme = item.textContent.toLocaleLowerCase();
     const themeId = item.id; //cleaner than .getAttribute("id")
 
     bodyEl.classList.remove("theme-light", "theme-dark");
