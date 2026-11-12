@@ -17,32 +17,59 @@ body {
   font-family: sans-serif;
   margin: 20px;
   background-color: var(--LIGHT-BG);
-  background-image: linear-gradient(130deg, var(--LIGHT-BG), var(--LIGHT-GRAY));
 }
 
-button {
+.dropdown-btn {
+  position: relative;
   appearance: none;
   border: none;
   padding: 12px 14px;
-  background-color: var(--LIGHT-PURPLE);
   color: var(--LIGHT-BG);
   font-size: 1.13rem;
   border-radius: 6px;
+  cursor: pointer;
 }
-
-ul {
-  list-style: none;
+.dropdown-menu {
+  position: absolute;
   background-color: var(--LIGHT-BG);
-  width: 150px;
+  min-width: 150px;
   border: 1px solid var(--LIGHT-GRAY);
   border-radius: 4px;
-}
-ul li {
-  padding: 8px ;
-  font-size: 1.14rem;
-  transition: background-color 0.3s;
+  z-index: 1;
 }
 
-ul li:hover {
+.dropdown-item {
+  list-style-type: none;
+  padding: 8px;
+  font-size: 1.14rem;
+  transition: background-color 0.3s;
+  width: 100%;
+  color: #000;
+}
+
+.dropdown-item:hover {
   background-color: var(--GRAY-COLOR);
+}
+
+[aria-live="polite"] {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+/* Themes */
+.theme-light {
+  background-color: var(--LIGHT-BG);
+  color: var(--DARK-COLOR);
+}
+.theme-light .dropdown-btn {
+  background-color: var(--LIGHT-PURPLE);
+  color: white;
+}
+.theme-dark {
+  color: var(--LIGHT-BG);
+  background-color: rgb(2, 2, 39);
+}
+.theme-dark .dropdown-btn {
+  color: #fff;
+  background-color: #333;
 }
