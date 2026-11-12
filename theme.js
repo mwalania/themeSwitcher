@@ -28,17 +28,23 @@ themeSwitcher.addEventListener("click", () => {
 themeItems.forEach(item => {
   item.addEventListener("click", () => {
     closeMenu();
+
     const currentTheme = item.textContent;
-    const themeId = item.getAttribute("id");
-    // bodyEl.setAttribute("class", themeId);
+    const themeId = item.id; //cleaner than .getAttribute("id")
+
     bodyEl.classList.remove("theme-light", "theme-dark");
     bodyEl.classList.add(themeId);
-    for (const theme of themes) {
-      if (theme.name === currentTheme) {
-        // console.log(theme.message);
-        themeMsg.textContent = theme.message;
-      }
+
+    const selectedTheme = themes.find(theme => theme.name === currentTheme);
+    console.log(`Selected Theme: ${selectedTheme}`)
+    if (selectedTheme) {
+      themeMsg.textContent = selectedTheme.message;
     }
+    // for (const theme of themes) {
+    //   if (theme.name === currentTheme) {
+    //     themeMsg.textContent = theme.message;
+    //   }
+    // }
   })
 });
 
