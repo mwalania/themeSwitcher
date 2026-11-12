@@ -1,7 +1,7 @@
 const themes = [
   {
     name: "Light",
-    message: "Hey there sunshine -- You swiched to Light mode"
+    message: "Hey there sunshine -- You switched to Light mode"
   },
   {
     name: "Dark",
@@ -36,7 +36,6 @@ themeItems.forEach(item => {
     bodyEl.classList.add(themeId);
 
     const selectedTheme = themes.find(theme => theme.name === currentTheme);
-    console.log(`Selected Theme: ${selectedTheme}`)
     if (selectedTheme) {
       themeMsg.textContent = selectedTheme.message;
     }
